@@ -28,7 +28,7 @@ jobs:
             ${{ runner.os }}-pipenv-
       - run: |
           pip install pipenv
-          pipenv install
+          pipenv install --dev
       - run: pipenv run lint
 
   test:
@@ -47,7 +47,7 @@ jobs:
             ${{ runner.os }}-pipenv-
       - run: |
           pip install pipenv
-          pipenv install
+          pipenv install --dev
       - run: pipenv run test
 
   build:
